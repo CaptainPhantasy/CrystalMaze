@@ -1,0 +1,39 @@
+{
+  "name": "crystalmaze",
+  "version": "0.1.0",
+  "description": "Analogy-driven architecture discovery CLI and library for synthesizing software designs from cross-domain patterns.",
+  "type": "module",
+  "bin": {
+    "crystalmaze": "./bin/crystalmaze.js"
+  },
+  "exports": {
+    ".": "./src/crystalmaze.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "scripts/",
+    "docs/release/",
+    "dist/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "lint": "node scripts/lint.mjs",
+    "e2e": "node scripts/e2e.mjs",
+    "release:pack": "npm pack --dry-run --json"
+  },
+  "keywords": [
+    "architecture",
+    "analogy",
+    "software-design",
+    "agent",
+    "cli"
+  ],
+  "author": "Legacy AI",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

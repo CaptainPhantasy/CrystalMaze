@@ -1,0 +1,9 @@
+
+.floyd/
+.supercache/
+FLOYD.md
+Agents.md
+.env
+node_modules/
+dist/
+.DS_Store

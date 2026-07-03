@@ -1,0 +1,53 @@
+{
+  "project_name": "CrystalMaze",
+  "completion_percentage": 92,
+  "tech_stack": [
+    "Node.js",
+    "ECMAScript modules",
+    "node:test",
+    "npm package"
+  ],
+  "complexity_score": 4,
+  "team_size_minimum": 1,
+  "go_to_market_timeline": "Packageable now for internal release; public release requires owner approval for license and final npm name.",
+  "industry_vertical": "Developer tools",
+  "business_model": "CLI and library package for architecture discovery workflows",
+  "technical_debt": 15,
+  "scalability_needs": "low",
+  "target_users": "Developers and AI agents designing software architecture from ambiguous technical problems.",
+  "key_features": [
+    "Deterministic cross-domain analogy selection from architecture problem statements",
+    "Architecture synthesis with components, data flow, and borrowed source patterns",
+    "Consensus review with strengths, weaknesses, recommendations, and confidence score",
+    "Reusable pattern key and persistence envelope for later reasoning cache integration",
+    "CLI with markdown and JSON output modes",
+    "npm package scripts for test, build, lint, e2e, and release dry run",
+    "Release documentation set covering notes, checklist, and package requirements"
+  ],
+  "risks": [
+    "Package metadata uses UNLICENSED until the owner chooses the final release license",
+    "npm registry lookup for crystalmaze returned E404; this suggests the name was not found, but publication still requires owner-controlled npm authentication and final name approval",
+    "FLOYD.md build command table still contains governance-template placeholders and should be updated only through the owner-approved governance flow"
+  ],
+  "_evidence": {
+    "project_name": "Observed project root /Volumes/Storage/CrystalMaze and package dry run id crystalmaze@0.1.0",
+    "completion_percentage": "Agent code review after implementation: npm test exit 0 with 8 passing tests; npm run build exit 0; npm run lint exit 0; npm run e2e exit 0; npm run release:pack exit 0 with 14 package entries",
+    "tech_stack": "package.json declares type=module, Node >=20, node --test script, and npm package metadata",
+    "complexity_score": "Small deterministic CLI/library with no runtime dependencies, two test files, three verification scripts, and release docs",
+    "team_size_minimum": "One maintainer can release after owner decisions because package has zero dependencies and local verification is scripted",
+    "go_to_market_timeline": "npm pack dry run produced crystalmaze-0.1.0.tgz metadata; public release still gated by license and npm ownership decisions",
+    "industry_vertical": "Derived from implemented CLI/library behavior and README positioning as developer architecture discovery tooling",
+    "business_model": "Derived from package.json, CLI bin, and docs/release/PACKAGE_REQUIREMENTS.md",
+    "technical_debt": "Remaining debt is governance metadata update, license choice, and release-name approval; automated test/build/lint/e2e checks pass",
+    "scalability_needs": "No server, database, or port binding; deterministic local computation only",
+    "target_users": "Derived from concept document and README: developers and agents using architecture discovery workflows",
+    "key_features": "Verified by source files src/crystalmaze.js and bin/crystalmaze.js, test output with 8 pass / 0 fail, and package dry-run file list",
+    "risks": "Verified by package.json license UNLICENSED, npm view crystalmaze returning E404, and FLOYD.md lines 108-121 still containing placeholder build commands",
+    "template": "/Volumes/SanDisk1Tb/.supercache/templates/repository-report-template.md",
+    "spec": "/Volumes/SanDisk1Tb/.supercache/contracts/repository-report-spec.md"
+  },
+  "_verified": true,
+  "_critic_rounds": 3,
+  "_last_verified": "2026-07-03T22:12:07Z",
+  "_verified_by": "agent code review"
+}
