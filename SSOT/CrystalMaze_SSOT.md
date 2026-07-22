@@ -1,7 +1,7 @@
 # CrystalMaze SSOT (Single Source of Truth)
 **Created:** 2026-07-03T17:56:08-04:00
 **Last Updated:** 2026-07-03T17:56:08-04:00
-**Governance:** .supercache/ v1.7.0
+**Governance:** .supercache/ v1.7.2
 
 > **Compliance Notice:** This file must match the structure at
 > `.supercache/templates/ssot-template.md`. This is the authoritative
