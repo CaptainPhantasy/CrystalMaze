@@ -1,42 +1,43 @@
 # CrystalMaze
 
-CrystalMaze is an analogy-driven architecture discovery CLI and library. It turns a software architecture problem into cross-domain analogies, a concrete architecture proposal, a consensus review, and a reusable reasoning envelope.
+![CrystalMaze — Floyd’s Labs](assets/hero.jpg)
 
-The reader for this document is an engineer or agent preparing to use or release the package. After reading it, they should be able to run a local analysis and understand the release path.
+**Architecture ideas from unexpected places.**
 
-## Install for local development
+A dependency-free CLI and ESM library that maps architecture questions to cross-domain analogies and structured proposals. Built at Floyd’s Labs: one garage, two black cats, and tools that have to earn the desk space.
 
-Use Node.js 20 or newer. The package has no runtime dependencies.
+[Download v0.1.0](https://github.com/CaptainPhantasy/CrystalMaze/releases/tag/v0.1.0) · [Report a bug](https://github.com/CaptainPhantasy/CrystalMaze/issues) · [Floyd’s Labs](https://floyd-labs-proving-ground.captainphantasy.chatgpt.site/open-source)
 
-```bash
-npm test
-npm run build
-npm run lint
-npm run e2e
+## Get it running
+
+Requirements: **Node.js 20 or newer**.
+
+Download `crystalmaze-0.1.0.tgz` from the release, then install the actual package:
+
+```sh
+npm install -g ./crystalmaze-0.1.0.tgz
+crystalmaze "Coordinate services without a central database"
+crystalmaze --json --domain biology "Make a rate limiter resilient to distributed clients"
 ```
 
-## Use the CLI
+For the ESM library, use `npm install ./crystalmaze-0.1.0.tgz` and import `analyzeArchitectureProblem` from `crystalmaze`. It uses built-in patterns; it does not call a hosted model. Treat proposals as design input, then check them against your system's constraints.
 
-```bash
-node bin/crystalmaze.js "My API rate limiter is bypassed by distributed clients"
-node bin/crystalmaze.js --json --domain biology "Coordinate services without central state"
-```
+## What is in the box
 
-The default output is a markdown report. The JSON mode returns the same analysis object that the library exports.
+The release includes `crystalmaze-0.1.0.tgz`, source where applicable, and `SHA256SUMS.txt`. Use the tagged release's named assets for installation; GitHub's automatic source archives are snapshots. Verify a download with `shasum -a 256 -c SHA256SUMS.txt` after downloading the matching files.
 
-## Use the library
+## Show the work
 
-```js
-import { analyzeArchitectureProblem, formatMarkdownReport } from 'crystalmaze';
+`npm test`, `npm run build`, `npm run lint`, and `npm run e2e` exercise the library, syntax/build, metadata, and CLI. The release package is separately installed and run from a fresh directory.
 
-const result = analyzeArchitectureProblem('Coordinate microservices without a central database');
-console.log(formatMarkdownReport(result));
-```
+## Contribute or get help
 
-## Release documents
+Open an issue with your platform, version, command, and a minimal reproduction. Keep credentials and personal transcripts out of reports. See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
 
-Release notes, package requirements, and the release checklist live in the release documentation set under the docs release section of this repository.
+## License
 
-## Package decision
+The repository has no open-source license granting redistribution rights. Existing restrictions are preserved; a public download does not change those rights.
 
-CrystalMaze is prepared as an npm package with a CLI binary named crystalmaze and an ESM library export. The package currently uses the unscoped npm name crystalmaze. Before public publication, confirm name availability and choose the final license.
+---
+
+Built with intent. Bella checks the keyboard. Bowser watches the router.

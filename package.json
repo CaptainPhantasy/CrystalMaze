@@ -12,10 +12,10 @@
   "files": [
     "bin/",
     "src/",
-    "scripts/",
-    "docs/release/",
-    "dist/",
-    "README.md"
+    "README.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "assets/"
   ],
   "scripts": {
     "build": "node scripts/build.mjs",
@@ -31,9 +31,17 @@
     "agent",
     "cli"
   ],
-  "author": "Legacy AI",
+  "author": "Floyd's Labs",
   "license": "UNLICENSED",
   "engines": {
     "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CaptainPhantasy/CrystalMaze.git"
+  },
+  "homepage": "https://floyd-labs-proving-ground.captainphantasy.chatgpt.site/open-source",
+  "bugs": {
+    "url": "https://github.com/CaptainPhantasy/CrystalMaze/issues"
   }
 }
