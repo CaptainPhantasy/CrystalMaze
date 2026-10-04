@@ -296,6 +296,9 @@ export function formatMarkdownReport(result) {
     '',
     `Pattern key: ${result.patternKey}`,
     '',
+    `Analogies source: ${result.serverBacked ? 'live analogy_synthesizer' : 'built-in catalog'}`,
+    `Confidence source: ${result.consensusReport.confidenceSource || 'hardcoded per theme'}`,
+    '',
     '## Cross-Domain Analogies',
     '',
     result.analogies.map((analogy) => [

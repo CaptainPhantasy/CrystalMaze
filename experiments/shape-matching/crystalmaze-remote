@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Run CrystalMaze on the fleet host over SSH.
+# Client machine needs only an ssh client and credentials:
+# no Node, no npm, no sudo, no install.
+#
+# Set these to point at your host:
+#   CRYSTALMAZE_HOST       required — the host running crystalmaze
+#   CRYSTALMAZE_REMOTE_BIN (default /usr/local/bin/crystalmaze)
+set -euo pipefail
+
+HOST="${CRYSTALMAZE_HOST:?set CRYSTALMAZE_HOST to the host running crystalmaze}"
+REMOTE_BIN="${CRYSTALMAZE_REMOTE_BIN:-/usr/local/bin/crystalmaze}"
+
+if [ "$#" -eq 0 ]; then
+  echo "usage: crystalmaze-remote [--json] [--domain <name>] <problem statement>" >&2
+  exit 1
+fi
+
+# Escape each argument for the remote shell so multi-word problem
+# statements and embedded quotes survive the SSH hop intact.
+escaped=''
+for arg in "$@"; do
+  printf -v piece '%q ' "$arg"
+  escaped+="$piece"
+done
+
+exec ssh -o BatchMode=yes -o ConnectTimeout=10 "$HOST" "$REMOTE_BIN $escaped"
